@@ -24,7 +24,7 @@ include 'db.php'; // o banco de dados
             <input type="number" name="idade" id="idade" required>
 
             <label for="email">Email:</label>
-            <input type="email" name="email" id="email" required> <!-- necessidade de colocar alguma coisa -- Feito em 01/10 10:01-->
+            <input type="email" name="email" id="email" required> <!-- necessidade de colocar alguma coisa -- Feito em 01/10 10:02-->
 
             <label for="curso">Curso:</label>
             <input type="text" name="curso" id="curso" required>
@@ -32,7 +32,7 @@ include 'db.php'; // o banco de dados
             <button type="submit">Cadastrar</button>
         </form>
 
-        <!-- Formulário de pesquisa -->
+        <!-- Formulário de pesquisa -- Feito em 03/10 08:31-->
         <form method="GET" action="" class="form-pesquisa">
             <?php
             // Verifica se foi feita uma pesquisa e armazena o termo
@@ -59,7 +59,6 @@ include 'db.php'; // o banco de dados
                 <?php
                 // Consulta padrão ou com base na pesquisa
                 if ($pesquisa) {
-                    // Prepara a consulta de pesquisa com parâmetros de nome ou curso
                     $sql = "SELECT * FROM alunos WHERE nome LIKE '%$pesquisa%' OR curso LIKE '%$pesquisa%'";
                 } else {
                     // Consulta padrão para listar todos os alunos
